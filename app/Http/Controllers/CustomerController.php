@@ -42,49 +42,93 @@ class CustomerController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-{
-    $messages = [
-        'required' => ':Attribute harus diisi.',
-        'email' => 'Isi :attribute dengan format yang benar',
-        'numeric' => 'Isi :attribute dengan angka'
-    ];
+    {
+        $messages = [ 
+            'required' => ':Attribute harus diisi.', 
+            'email' => 'Isi :attribute dengan format yang benar', 
+            'numeric' => 'Isi :attribute dengan angka' 
+        ]; 
+     
+        $validator = Validator::make($request->all(), [ 
+            'firstName' => 'required', 
+            'lastName' => 'required', 
+            'email' => 'required|email', 
+            'age' => 'required|numeric', 
+            'car' => 'required|exists:cars,id',
 
-    $validator = Validator::make($request->all(), [
-        'firstName' => 'required',
-        'lastName' => 'required',
-        'email' => 'required|email',
-        'age' => 'required|numeric',
-        'car' => 'required|exists:cars,id',
-    ], $messages);
-
-    if ($validator->fails()) {
-        return redirect()->back()->withErrors($validator)->withInput();
+        ], $messages); 
+     
+        if ($validator->fails()) { 
+            return redirect()->back()->withErrors($validator)->withInput(); 
+        }
+         // ELOQUENT 
+        $customer = New Customer; 
+        $customer->firstname = $request->firstName; 
+        $customer->lastname = $request->lastName; 
+        $customer->email = $request->email; 
+        $customer->age = $request->age; 
+        $customer->car_id = $request->car; 
+        $customer->save(); 
+ 
+        return redirect()->route('customers.index'); 
     }
 
-    // ELOQUENT
-    $car = Car::find($request->car);
-    
-    // Cek jika mobil tersedia (misalnya jika ada field 'stock' di tabel cars)
-    if ($car->stock <= 0) {
-        return redirect()->back()->withErrors(['car' => 'Mobil tidak tersedia.'])->withInput();
-    }
-
-    // Kurangi stok mobil
-    $car->stock -= 1; // Mengurangi 1 dari stok
-    $car->save(); // Simpan perubahan stok
-
-    // Simpan data customer
-    $customer = new Customer;
-    $customer->firstname = $request->firstName;
-    $customer->lastname = $request->lastName;
-    $customer->email = $request->email;
-    $customer->age = $request->age;
-    $customer->car_id = $request->car;
-    $customer->save();
-
-    return redirect()->route('customers.index');
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function show(string $id) 
+{ 
+    $pageTitle = 'Customer Detail'; 
+ 
+    // ELOQUENT 
+    $customer = Customer::find($id); 
+ 
+    return view('customer.show', compact('pageTitle', 'customer'));
 }
+    public function edit(string $id)
+    {
+        $pageTitle = 'Edit Customer'; 
+    
+        // ELOQUENT 
+        $cars = Car::all(); 
+        $customer = Customer::find($id); 
+    
+        return view('customer.edit', compact('pageTitle', 'cars', 'customer')); 
+    }
 
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        $messages = [
+            'required' => ':Attribute harus diisi.',
+            'email' => 'Isi :attribute dengan format yang benar',
+            'numeric' => 'Isi :attribute dengan angka',
+        ];
+    
+        $validator = Validator::make($request->all(), [
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'email' => 'required|email',
+            'age' => 'required|numeric',
+        ], $messages);
+    
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+    
+        // ELOQUENT 
+        $customer = Customer::find($id); 
+        $customer->firstname = $request->firstName; 
+        $customer->lastname = $request->lastName; 
+        $customer->email = $request->email; 
+        $customer->age = $request->age; 
+        $customer->car_id = $request->car; 
+        $customer->save(); 
+    
+        return redirect()->route('customers.index');
+    }
 
     /**
      * Remove the specified resource from storage.
