@@ -111,7 +111,11 @@ scale=1.0">
             <input type="email" name="email" placeholder="Masukkan Email Anda" required>
             <input type="password" name="password" placeholder="Masukkan Passworanda" required>
             <button type="submit">Login Admin</button>
-        </form>   
+        </form> 
+        <form action="{{ route('homeCustomer') }}" method="GET">
+            @csrf
+            <button type="submit">Peminjaman</button>
+        </form>
     </div>
 </body>
 

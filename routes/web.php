@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CustomerController; 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeCustomerController;
 
 Route::get('home', [HomeController::class, 'index'])->name('home'); 
 Route::get('profile', ProfileController::class)->name('profile');
@@ -20,10 +21,18 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Route dengan middleware 'auth'
 Route::middleware(['auth'])->group(function () { 
-    Route::get('/home', [HomeController::class, 'index'])->name('home'); 
-    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::resource('customers', CustomerController::class); 
 });
 
 // Route default untuk halaman utama
 Route::get('/', [AuthController::class, 'showLoginForm']);
+
+//halaman customer
+Route::get('/homeCustomer', function () {
+    return view('homeCustomer');  // Pastikan sudah ada file view 'homecustomer.blade.php'
+})->name('homeCustomer');
+Route::get('/homeCustomer', [HomeCustomerController::class, 'index'])->name('homeCustomer');
+Route::post('/homeCustomer', [HomeCustomerController::class, 'store']);
+Route::get('/customers/create', [HomeCustomerController::class, 'create'])->name('customers.create');
+Route::post('/customers', [HomeCustomerController::class, 'store'])->name('customers.store');

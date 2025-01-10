@@ -29,8 +29,22 @@ route('customers.index') }}" class="nav-link @if($currentRouteName ==
  
             <hr class="d-md-none text-white-50"> 
  
-            <a href="{{ route('profile') }}" class="btn btn-outline-light 
-my-2 ms-md-auto"><i class="bi-person-circle me-1"></i> My Profile</a> 
-        </div> 
-    </div> 
+            <div class="dropdown ms-md-auto">
+                <button class="btn btn-outline-light dropdown-toggle" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi-person-circle me-1"></i> My Profile
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                    <li>
+                        <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
+                    </li>
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="dropdown-item">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </nav> 

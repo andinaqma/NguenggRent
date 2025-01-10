@@ -64,7 +64,7 @@
                                 @foreach ($cars as $car) 
                                 <option value="{{ $car->id }}"
                                     {{ old('car') == $car->id ? 'selected' : '' }}>
-                                    {{ $car->code . ' - ' . $car->name }}
+                                    {{ $car->name . ' - ' . $car->description }}
                                 </option>                                
                                 @endforeach 
                             </select> 
