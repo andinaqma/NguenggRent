@@ -13,8 +13,8 @@ class HomeCustomerController extends Controller
     {
         $pageTitle = 'Silahkan Isi Form Anda';
         $takenCarIds = Customer::pluck('car_id')->toArray();
-        $availableCars = Car::whereNotIn('id', $takenCarIds)->get(); // Ambil mobil yang belum dipilih
-        return view('homeCustomer', compact('pageTitle', 'availableCars'));
+        $cars = Car::whereNotIn('id', $takenCarIds)->get(); // Ambil mobil yang belum dipilih
+        return view('homeCustomer', compact('pageTitle', 'cars'));
         
     }
     public function create()
@@ -39,7 +39,10 @@ class HomeCustomerController extends Controller
             'firstName' => 'required', 
             'lastName' => 'required', 
             'email' => 'required|email', 
-            'age' => 'required|numeric', 
+            'age' => 'required|numeric',
+            'ktp' => 'required|numeric',
+            'rental_date' => 'required|date',
+            'return_date' => 'required|date|after_or_equal:rental_date',
             'car' => 'required|exists:cars,id',
 
         ], $messages); 
@@ -52,7 +55,10 @@ class HomeCustomerController extends Controller
         $customer->firstname = $request->firstName; 
         $customer->lastname = $request->lastName; 
         $customer->email = $request->email; 
-        $customer->age = $request->age; 
+        $customer->age = $request->age;
+        $customer->ktp = $request->ktp;
+        $customer->rental_date = $request->rental_date;
+        $customer->return_date = $request->return_date;
         $customer->car_id = $request->car; 
         $customer->save(); 
  

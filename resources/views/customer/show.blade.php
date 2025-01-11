@@ -30,7 +30,19 @@ label">Email</label>
                     <div class="col-md-12 mb-3"> 
                         <label for="age" class="form-label">Age</label> 
                         <h5>{{ $customer->age }}</h5> 
+                    </div>
+                    <div class="col-md-12 mb-3"> 
+                        <label for="ktp" class="form-label">Identity Number (KTP)</label> 
+                        <h5>{{ $customer->ktp }}</h5> 
                     </div> 
+                    <div class="col-md-12 mb-3"> 
+                        <label for="rental_date" class="form-label">Rental Date</label> 
+                        <h5>{{ $customer->rental_date }}</h5> 
+                    </div> 
+                    <div class="col-md-12 mb-3"> 
+                        <label for="return_date" class="form-label">Return Date</label> 
+                        <h5>{{ $customer->return_date }}</h5> 
+                    </div>
                     <div class="col-md-12 mb-3"> 
                         <label for="age" class="form
 label">Car</label> 

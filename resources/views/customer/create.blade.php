@@ -55,6 +55,31 @@
                                 <div class="text-danger"><small>{{ $message 
         }}</small></div> 
                             @enderror 
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="ktp" class="form-label">Identity Number (KTP)</label>
+                            <input class="form-control @error('ktp') is-invalid @enderror" type="text" name="ktp"
+                                id="ktp" value="{{ old('ktp') }}" placeholder="Enter Identity Number (KTP)">
+                            @error('ktp')
+                                <div class="text-danger"><small>{{ $message }}</small></div>
+                            @enderror
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="rental_date" class="form-label">Rental Date</label>
+                            <input class="form-control @error('rental_date') is-invalid @enderror" type="date" name="rental_date"
+                                id="rental_date" value="{{ old('rental_date') }}">
+                            @error('rental_date')
+                                <div class="text-danger"><small>{{ $message }}</small></div>
+                            @enderror
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="return_date" class="form-label">Return Date</label>
+                            <input class="form-control @error('return_date') is-invalid @enderror" type="date" name="return_date"
+                                id="return_date" value="{{ old('return_date') }}">
+                            @error('return_date')
+                                <div class="text-danger"><small>{{ $message }}</small></div>
+                            @enderror
                         </div> 
                         <div class="col-md-12 mb-3"> 
                             <label for="car" class="form

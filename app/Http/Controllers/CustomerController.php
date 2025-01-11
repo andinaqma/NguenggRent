@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -53,7 +52,10 @@ class CustomerController extends Controller
             'firstName' => 'required', 
             'lastName' => 'required', 
             'email' => 'required|email', 
-            'age' => 'required|numeric', 
+            'age' => 'required|numeric',
+            'ktp' => 'required|numeric',
+            'rental_date' => 'required|date',
+            'return_date' => 'required|date|after_or_equal:rental_date',
             'car' => 'required|exists:cars,id',
 
         ], $messages); 
@@ -66,7 +68,10 @@ class CustomerController extends Controller
         $customer->firstname = $request->firstName; 
         $customer->lastname = $request->lastName; 
         $customer->email = $request->email; 
-        $customer->age = $request->age; 
+        $customer->age = $request->age;
+        $customer->ktp = $request->ktp;
+        $customer->rental_date = $request->rental_date;
+        $customer->return_date = $request->return_date;
         $customer->car_id = $request->car; 
         $customer->save(); 
  
@@ -112,6 +117,10 @@ class CustomerController extends Controller
             'lastName' => 'required',
             'email' => 'required|email',
             'age' => 'required|numeric',
+            'ktp' => 'required|numeric',
+            'rental_date' => 'required|date',
+            'return_date' => 'required|date|after_or_equal:rental_date',
+            'car' => 'required|exists:cars,id',
         ], $messages);
     
         if ($validator->fails()) {
@@ -123,7 +132,10 @@ class CustomerController extends Controller
         $customer->firstname = $request->firstName; 
         $customer->lastname = $request->lastName; 
         $customer->email = $request->email; 
-        $customer->age = $request->age; 
+        $customer->age = $request->age;
+        $customer->ktp = $request->ktp;
+        $customer->rental_date = $request->rental_date;
+        $customer->return_date = $request->return_date;
         $customer->car_id = $request->car; 
         $customer->save(); 
     
