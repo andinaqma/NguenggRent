@@ -4,11 +4,14 @@
  
  
  
-<nav class="navbar navbar-expand-md navbar-dark bg-primary"> 
+<nav class="navbar navbar-expand-md navbar-dark bg-black"> 
     <div class="container"> 
-        <a href="{{ route('home') }}" class="navbar-brand mb-0 h1"><i 
-class="bi-hexagon-fill me-2"></i> Nguengg Rent</a> 
- 
+        <a href="{{ route('homeCustomer') }}" class="navbar-brand mb-0 h1" style="color: #FFD700;">
+            Nguengg
+        </a>
+        <a href="{{ route('homeCustomer') }}" class="navbar-brand mb-0 h1" style="color: #FFFFFF;">
+            Rent
+        </a>
         <button type="button" class="navbar-toggler" data-bs
 toggle="collapse" data-bs-target="#navbarSupportedContent"> 
             <span class="navbar-toggler-icon"></span> 

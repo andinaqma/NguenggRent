@@ -56,7 +56,7 @@
                             <div class="col-md-12 mb-3">
                                 <label for="ktp" class="form-label">Identity Number (KTP)</label>
                                 <input class="form-control @error('ktp') is-invalid @enderror" type="text" name="ktp"
-                                    id="ktp" value="{{ old('ktp') }}" placeholder="Enter Identity Number (KTP)">
+                                    id="ktp" value="{{ old('ktp') }}" placeholder="Enter Identity Number">
                                 @error('ktp')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
@@ -83,33 +83,40 @@
                             <div class="col-md-12 mb-3">
                                 <label for="car" class="form-label">Car</label>
                                 <select name="car" id="car" class="form-select">
-                                    @foreach ($cars as $car)
-                                        <option value="{{ $car->id }}"
-                                            {{ old('car') == $car->id ? 'selected' : '' }}>
-                                            {{ $car->code . ' - ' . $car->name }}</option>
-                                    @endforeach
+                                    <option value="" disabled selected>Select Car</option>
+                                    @if($cars->isEmpty())
+                                        <option disabled>Car not available</option>
+                                    @else
+                                        @foreach ($cars as $car)
+                                            <option value="{{ $car->id }}"
+                                                {{ old('car') == $car->id ? 'selected' : '' }}>
+                                                {{ $car->code . ' - ' . $car->name }}
+                                            </option>
+                                        @endforeach
+                                    @endif
                                 </select>
                                 @error('car')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
+                            
                         </div>
                         <!-- Buttons -->
                         <div class="row">
                             <div class="col-md-6 d-grid">
                                 <a href="{{ route('customers.index') }}" class="btn btn-danger btn-lg mt-3"><i
-                                        class="bi-arrow-left-circle me-2"></i> Batal</a>
+                                        class="bi-arrow-left-circle me-2"></i> Cancel</a>
                             </div>
                             <div class="col-md-6 d-grid">
                                 <button type="submit" class="btn btn-success btn-lg mt-3"><i
-                                        class="bi-check-circle me-2"></i> Simpan</button>
+                                        class="bi-check-circle me-2"></i> Save</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </form>
-        <!-- Cars Available (Moved below the form) -->
+        <!-- ini tabel mobil yang tersedia di rental -->
         <div class="row justify-content-between mt-5">
             <div class="col-md-3">
                 <div class="card">
@@ -167,6 +174,21 @@
                             <li>Engine: 2.0L M20A-FKS Dynamic Force Engine, 4-cylinder, Dual VVT-i, producing 174 PS at 6,600 rpm and 20.9 kg·m of torque at 4,500–4,900 rpm.</li>
                             <li>Transmission:  10-speed CVT with Direct Shift.</li>
                             <li>Passenger Capacity: 7 persons</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4>Honda Brio 2023</h4>
+                    </div>
+                    <img src="{{ asset('images/honda-brio-2023.png') }}" class="card-img-top" alt="Toyota Innova Zenix 2025">
+                    <div class="card-body">
+                        <ul>
+                            <li>Engine: 1.2L SOHC 4-cylinder in-line, 16 valves i-VTEC + DBW, with a displacement of 1,198 cc.</li>
+                            <li>Transmission: Available in both 5-speed Manual and CVT</li>
+                            <li>Passenger Capacity: 5 persons</li>
                         </ul>
                     </div>
                 </div>

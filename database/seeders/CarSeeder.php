@@ -33,7 +33,12 @@ class CarSeeder extends Seeder
                 'code' => 'INZ', 
                 'name' => 'Innova Zenix', 
                 'description' => 'Toyota' 
-            ], 
+            ],
+            [ 
+                'code' => 'BRI', 
+                'name' => 'BRIO RS', 
+                'description' => 'Honda' 
+            ],
         ]); 
     }
 }
