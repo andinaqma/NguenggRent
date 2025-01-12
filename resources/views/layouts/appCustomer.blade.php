@@ -7,7 +7,7 @@
     <title>{{ $pageTitle }}</title>
     @vite('resources/sass/app.scss')
 </head>
-<body style="background-image: url('/images/bgNguengg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<body style="background-image: url('/images/bglagi.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     @include('layouts.navCustomer')
     
     @yield('content')
