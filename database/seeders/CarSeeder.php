@@ -29,6 +29,11 @@ class CarSeeder extends Seeder
                 'name' => 'Terios', 
                 'description' => 'Daihatsu' 
             ], 
+            [ 
+                'code' => 'INZ', 
+                'name' => 'Innova Zenix', 
+                'description' => 'Toyota' 
+            ], 
         ]); 
     }
 }

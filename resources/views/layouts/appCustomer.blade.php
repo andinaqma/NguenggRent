@@ -9,6 +9,7 @@
 </head>
 <body style="background-image: url('/images/bgNguengg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     @include('layouts.navCustomer')
+    
     @yield('content')
     @vite('resources/js/app.js')
 </body>
