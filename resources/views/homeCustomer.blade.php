@@ -126,7 +126,7 @@
                     <img src="{{ asset('images/honda-civic-2024.png') }}" class="card-img-top" alt="Honda Civic 2024">
                     <div class="card-body">
                         <ul>
-                            <li>Engine: 1.5L DOHC 4-Cylinder Turbo, producing 178 PS (approximately 175 HP) at 6,000 rpm and 240 Nm torque at 1,700–4,500 rpm</li>
+                            <li>Engine: 1.5L DOHC 4-Cylinder Turbo, producing 178 PS (approximately 175 HP) at 6,000 rpm and 240 Nm torque at 1,700–4,500 rpm.</li>
                             <li>Transmission: CVT</li>
                             <li>Passenger Capacity: 5 persons</li>
                         </ul>
@@ -186,7 +186,7 @@
                     <div class="card-header text-center">
                         <h4>Honda Brio 2023</h4>
                     </div>
-                    <img src="{{ asset('images/honda-brio-2023.png') }}" class="card-img-top" alt="Honda Civic 2024">
+                    <img src="{{ asset('images/honda-brio-2023.png') }}" class="card-img-top" alt="Honda Brio 2023">
                     <div class="card-body">
                         <ul>
                             <li>1.2L SOHC 4-cylinder in-line, 16 valves i-VTEC + DBW, with a displacement of 1,198 cc.</li>
@@ -201,7 +201,7 @@
                     <div class="card-header text-center">
                         <h4>Suzuki Jimny 2018</h4>
                     </div>
-                    <img src="{{ asset('images/suzuki-jimny-hitam.png') }}" class="card-img-top" alt="Honda HR-V 2022">
+                    <img src="{{ asset('images/suzuki-jimny-hitam.png') }}" class="card-img-top" alt="Suziki Jimny 2018">
                     <div class="card-body">
                         <ul>
                             <li>Engine: 1.5L 4-cylinder in-line, DOHC, dengan displacement 1,462 cc.</li>
@@ -214,14 +214,14 @@
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-header text-center">
-                        <h4>Daihatsu Terios 2022</h4>
+                        <h4>Toyota Yaris Cross 2023</h4>
                     </div>
-                    <img src="{{ asset('images/daihatsu-terios-2022.png') }}" class="card-img-top" alt="Daihatsu Terios 2022">
+                    <img src="{{ asset('images/yaris.png') }}" class="card-img-top" alt="Toyota Yaris Cross 2023">
                     <div class="card-body">
                         <ul>
-                            <li>Engine: 1.5L 2NR-VE DOHC Dual VVT-i, producing  103 HP at 6,000 rpm and a maximum torque of 13.9 kg.m at 4,200 rpm.</li>
-                            <li>Transmission: 5-speed manual or 4-speed automatic</li>
-                            <li>Passenger Capacity: 7 persons</li>
+                            <li>Engine: 1.5L naturally aspirated (NA) engine.</li>
+                            <li>Transmission: CVT (Continuously Variable Transmission).</li>
+                            <li>Passenger Capacity: 5 persons</li>
                         </ul>
                     </div>
                 </div>
@@ -229,14 +229,14 @@
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-header text-center">
-                        <h4>Toyota Innova Zenix 2025</h4>
+                        <h4>Toyota Raize 2022</h4>
                     </div>
-                    <img src="{{ asset('images/toyota-innova_zenix-2025.png') }}" class="card-img-top" alt="Toyota Innova Zenix 2025">
+                    <img src="{{ asset('images/raize.jpg') }}" class="card-img-top" alt="Toyota Raize 2022">
                     <div class="card-body">
                         <ul>
-                            <li>Engine: 2.0L M20A-FKS Dynamic Force Engine, 4-cylinder, Dual VVT-i, producing 174 PS at 6,600 rpm and 20.9 kg·m of torque at 4,500–4,900 rpm.</li>
-                            <li>Transmission:  10-speed CVT with Direct Shift.</li>
-                            <li>Passenger Capacity: 7 persons</li>
+                            <li>Engine: 1.0L Turbo atau 1.2L, 3-silinder.</li>
+                            <li>Transmission:  CVT (Continuously Variable Transmission) automatic.</li>
+                            <li>Passenger Capacity: 5 persons</li>
                         </ul>
                     </div>
                 </div>
