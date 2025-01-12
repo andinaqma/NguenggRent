@@ -104,11 +104,11 @@
                         <!-- Buttons -->
                         <div class="row">
                             <div class="col-md-6 d-grid">
-                                <a href="{{ route('customers.index') }}" class="btn btn-danger btn-lg mt-3" style="border-color: #0e0e0e; background-color: #b53600b6;">><i
+                                <a href="{{ route('customers.index') }}" class="btn btn-danger btn-lg mt-3" style="border-color: #0e0e0e; background-color: #b53600b6;"><i
                                         class="bi-arrow-left-circle me-2"></i> Cancel</a>
                             </div>
                             <div class="col-md-6 d-grid">
-                                <button type="submit" class="btn btn-success btn-lg mt-3" style="background-color: #0fe54fa5; border-color: #000000;">><i
+                                <button type="submit" class="btn btn-success btn-lg mt-3" style="background-color: #0fe54fa5; border-color: #000000;"><i
                                         class="bi-check-circle me-2"></i> Save</button>
                             </div>
                         </div>
