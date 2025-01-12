@@ -98,13 +98,13 @@
             <h1>Login</h1>
             <form action="{{ route('login.process') }}" method="POST">
                 @csrf
-                <input type="email" name="email" placeholder="Masukkan Email Anda" required>
-                <input type="password" name="password" placeholder="Masukkan Passworanda" required> 
-                <button type="submit">Login Admin</button>
+                <input type="email" name="email" placeholder="Enter Your Email" required>
+                <input type="password" name="password" placeholder="Enter Your Password" required> 
+                <button type="submit">Administration Login</button>
             </form> 
             <form action="{{ route('homeCustomer') }}" method="GET">
                 @csrf
-                <button type="submit">Peminjaman</button>
+                <button type="submit">Form Rental</button>
             </form>
         </div>
     </div>
