@@ -14,6 +14,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column; /* Ensure footer stays at the bottom */
         }
 
         .login-container {
@@ -85,6 +86,17 @@
             width: 100%;
             margin: 20px 0;
         }
+
+        /* Footer style */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #000000;
+            width: 100%;
+            position: absolute;
+            bottom: 10px;
+        }
     </style>
 </head>
 
@@ -108,6 +120,10 @@
             </form>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; {{ date('Y') }} Nguengg Rent. All Rights Reserved.</p>
+    </footer>
 </body>
 
 </html>
