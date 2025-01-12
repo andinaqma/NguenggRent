@@ -39,6 +39,21 @@ class CarSeeder extends Seeder
                 'name' => 'BRIO RS', 
                 'description' => 'Honda' 
             ],
+            [ 
+                'code' => 'JIM', 
+                'name' => 'JIMNY', 
+                'description' => 'Suzuki' 
+            ],
+            [ 
+                'code' => 'YRS', 
+                'name' => 'YARIS CROSS', 
+                'description' => 'Toyota' 
+            ],
+            [ 
+                'code' => 'RZ', 
+                'name' => 'RAIZE', 
+                'description' => 'Toyota' 
+            ],
         ]); 
     }
 }
