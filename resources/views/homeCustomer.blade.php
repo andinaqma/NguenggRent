@@ -6,83 +6,83 @@
             @csrf
             <div class="row justify-content-center">
                 <!-- Form -->
-                <div class="col-md-8">
-                    <div class="p-5 bg-light rounded-3 border">
+                <div class="col-md-8" >
+                    <div class="p-5 bg-light rounded-3 border" style="border-color: #000000 !important; background-color: #000000c9 !important;">
                         <div class="mb-3 text-center">
                             <i class="bi-person-circle fs-1"></i>
-                            <h4>Form Rent</h4>
+                            <h4 style="color: #FFFFFF;">Form Rent</h4>
                         </div>
-                        <hr>
+                        <hr style="border: 1px solid #f9f8f8;">
                         <div class="row">
                             <!-- First Name -->
                             <div class="col-md-6 mb-3">
-                                <label for="firstName" class="form-label">First Name</label>
+                                <label for="firstName" class="form-label" style="color: #FFFFFF;" >First Name</label>
                                 <input class="form-control @error('firstName') is-invalid @enderror" type="text"
                                     name="firstName" id="firstName" value="{{ old('firstName') }}"
-                                    placeholder="Enter First Name">
+                                    placeholder="Enter First Name" style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('firstName')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <!-- Last Name -->
                             <div class="col-md-6 mb-3">
-                                <label for="lastName" class="form-label">Last Name</label>
+                                <label for="lastName" class="form-label" style="color: #FFFFFF;" >Last Name</label>
                                 <input class="form-control @error('lastName') is-invalid @enderror" type="text"
                                     name="lastName" id="lastName" value="{{ old('lastName') }}"
-                                    placeholder="Enter Last Name">
+                                    placeholder="Enter Last Name" style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('lastName')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <!-- Email -->
                             <div class="col-md-6 mb-3">
-                                <label for="email" class="form-label">Email</label>
+                                <label for="email" class="form-label" style="color: #FFFFFF;" >Email</label>
                                 <input class="form-control @error('email') is-invalid @enderror" type="email" name="email"
-                                    id="email" value="{{ old('email') }}" placeholder="Enter Email">
+                                    id="email" value="{{ old('email') }}" placeholder="Enter Email" style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('email')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <!-- Age -->
                             <div class="col-md-6 mb-3">
-                                <label for="age" class="form-label">Age</label>
+                                <label for="age" class="form-label" style="color: #FFFFFF;" >Age</label>
                                 <input class="form-control @error('age') is-invalid @enderror" type="number" name="age"
-                                    id="age" value="{{ old('age') }}" placeholder="Enter Age">
+                                    id="age" value="{{ old('age') }}" placeholder="Enter Age" style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('age')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <!-- KTP -->
                             <div class="col-md-12 mb-3">
-                                <label for="ktp" class="form-label">Identity Number (KTP)</label>
+                                <label for="ktp" class="form-label" style="color: #FFFFFF;" >Identity Number (KTP)</label>
                                 <input class="form-control @error('ktp') is-invalid @enderror" type="text" name="ktp"
-                                    id="ktp" value="{{ old('ktp') }}" placeholder="Enter Identity Number">
+                                    id="ktp" value="{{ old('ktp') }}" placeholder="Enter Identity Number" style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('ktp')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <!-- Rental Date -->
                             <div class="col-md-6 mb-3">
-                                <label for="rental_date" class="form-label">Rental Date</label>
+                                <label for="rental_date" class="form-label" style="color: #FFFFFF;" >Rental Date</label>
                                 <input class="form-control @error('rental_date') is-invalid @enderror" type="date"
-                                    name="rental_date" id="rental_date" value="{{ old('rental_date') }}">
+                                    name="rental_date" id="rental_date" value="{{ old('rental_date') }}" style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('rental_date')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <!-- Return Date -->
                             <div class="col-md-6 mb-3">
-                                <label for="return_date" class="form-label">Return Date</label>
+                                <label for="return_date" class="form-label" style="color: #FFFFFF;" >Return Date</label>
                                 <input class="form-control @error('return_date') is-invalid @enderror" type="date"
-                                    name="return_date" id="return_date" value="{{ old('return_date') }}">
+                                    name="return_date" id="return_date" value="{{ old('return_date') }}" style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('return_date')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <!-- Car -->
                             <div class="col-md-12 mb-3">
-                                <label for="car" class="form-label">Car</label>
-                                <select name="car" id="car" class="form-select">
+                                <label for="car" class="form-label" style="color: #FFFFFF;" >Car</label>
+                                <select name="car" id="car" class="form-select" style="border-color: #000000;background-color: #ffffffcf;">
                                     <option value="" disabled selected>Select Car</option>
                                     @if($cars->isEmpty())
                                         <option disabled>Car not available</option>
@@ -104,11 +104,11 @@
                         <!-- Buttons -->
                         <div class="row">
                             <div class="col-md-6 d-grid">
-                                <a href="{{ route('customers.index') }}" class="btn btn-danger btn-lg mt-3"><i
+                                <a href="{{ route('customers.index') }}" class="btn btn-danger btn-lg mt-3" style="border-color: #0e0e0e; background-color: #b53600b6;">><i
                                         class="bi-arrow-left-circle me-2"></i> Cancel</a>
                             </div>
                             <div class="col-md-6 d-grid">
-                                <button type="submit" class="btn btn-success btn-lg mt-3"><i
+                                <button type="submit" class="btn btn-success btn-lg mt-3" style="background-color: #0fe54fa5; border-color: #000000;">><i
                                         class="bi-check-circle me-2"></i> Save</button>
                             </div>
                         </div>

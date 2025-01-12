@@ -18,7 +18,7 @@
 
         .login-container {
             display: flex;
-            background-color: #ffffff;
+            background-color: #000000b3;
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -42,15 +42,15 @@
         .login-container h1 {
             font-size: 24px;
             font-weight: bold;
-            color: #333;
+            color: #ffffff;
             margin-bottom: 20px;
         }
 
         .login-container input {
-            width: calc(100% - 24px);
+            width: calc(100% - 24px) ;
             padding: 12px;
             margin-bottom: 15px;
-            border: 1px solid #ddd;
+            border: 1px solid #0000008e ;
             border-radius: 6px;
             font-size: 16px;
             display: block;
@@ -61,7 +61,7 @@
         .login-container button {
             width: calc(100% - 24px);
             padding: 12px;
-            background-color: #000000;
+            background-color: #2f5494da;
             color: #ffffff;
             border: none;
             border-radius: 6px;
