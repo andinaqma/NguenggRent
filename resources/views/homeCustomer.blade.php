@@ -183,12 +183,27 @@
                     <div class="card-header text-center">
                         <h4>Honda Brio 2023</h4>
                     </div>
-                    <img src="{{ asset('images/honda-brio-2023.png') }}" class="card-img-top" alt="Toyota Innova Zenix 2025">
+                    <img src="{{ asset('images/honda-brio-2023.png') }}" class="card-img-top" alt="Honda Brio 2023">
                     <div class="card-body">
                         <ul>
                             <li>Engine: 1.2L SOHC 4-cylinder in-line, 16 valves i-VTEC + DBW, with a displacement of 1,198 cc.</li>
                             <li>Transmission: Available in both 5-speed Manual and CVT</li>
                             <li>Passenger Capacity: 5 persons</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4>Suzuki Jimny 2018</h4>
+                    </div>
+                    <img src="{{ asset('images/suzuki-jimny-hitam.png') }}" class="card-img-top" alt="Suzuki Jimny 2018">
+                    <div class="card-body">
+                        <ul>
+                            <li>Engine: 1.5L 4-cylinder in-line, DOHC, dengan displacement 1,462 cc.</li>
+                            <li>Transmission: 5-speed Manual and 4-speed Automatic.</li>
+                            <li>Passenger Capacity: 4 persons</li>
                         </ul>
                     </div>
                 </div>
