@@ -6,8 +6,9 @@
             @csrf
             <div class="row justify-content-center">
                 <!-- Form -->
-                <div class="col-md-8" >
-                    <div class="p-5 bg-light rounded-3 border" style="border-color: #000000 !important; background-color: #000000c9 !important;">
+                <div class="col-md-8">
+                    <div class="p-5 bg-light rounded-3 border"
+                        style="border-color: #000000 !important; background-color: #000000c9 !important;">
                         <div class="mb-3 text-center">
                             <i class="bi-person-circle fs-1"></i>
                             <h4 style="color: #FFFFFF;">Form Rent</h4>
@@ -16,75 +17,84 @@
                         <div class="row">
                             <!-- First Name -->
                             <div class="col-md-6 mb-3">
-                                <label for="firstName" class="form-label" style="color: #FFFFFF;" >First Name</label>
+                                <label for="firstName" class="form-label" style="color: #FFFFFF;">First Name</label>
                                 <input class="form-control @error('firstName') is-invalid @enderror" type="text"
                                     name="firstName" id="firstName" value="{{ old('firstName') }}"
-                                    placeholder="Enter First Name" style="border-color: #000000;background-color: #ffffffcf;">
+                                    placeholder="Enter First Name"
+                                    style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('firstName')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <!-- Last Name -->
                             <div class="col-md-6 mb-3">
-                                <label for="lastName" class="form-label" style="color: #FFFFFF;" >Last Name</label>
+                                <label for="lastName" class="form-label" style="color: #FFFFFF;">Last Name</label>
                                 <input class="form-control @error('lastName') is-invalid @enderror" type="text"
                                     name="lastName" id="lastName" value="{{ old('lastName') }}"
-                                    placeholder="Enter Last Name" style="border-color: #000000;background-color: #ffffffcf;">
+                                    placeholder="Enter Last Name"
+                                    style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('lastName')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <!-- Email -->
                             <div class="col-md-6 mb-3">
-                                <label for="email" class="form-label" style="color: #FFFFFF;" >Email</label>
-                                <input class="form-control @error('email') is-invalid @enderror" type="email" name="email"
-                                    id="email" value="{{ old('email') }}" placeholder="Enter Email" style="border-color: #000000;background-color: #ffffffcf;">
+                                <label for="email" class="form-label" style="color: #FFFFFF;">Email</label>
+                                <input class="form-control @error('email') is-invalid @enderror" type="email"
+                                    name="email" id="email" value="{{ old('email') }}" placeholder="Enter Email"
+                                    style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('email')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <!-- Age -->
                             <div class="col-md-6 mb-3">
-                                <label for="age" class="form-label" style="color: #FFFFFF;" >Age</label>
+                                <label for="age" class="form-label" style="color: #FFFFFF;">Age</label>
                                 <input class="form-control @error('age') is-invalid @enderror" type="number" name="age"
-                                    id="age" value="{{ old('age') }}" placeholder="Enter Age" style="border-color: #000000;background-color: #ffffffcf;">
+                                    id="age" value="{{ old('age') }}" placeholder="Enter Age"
+                                    style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('age')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <!-- KTP -->
                             <div class="col-md-12 mb-3">
-                                <label for="ktp" class="form-label" style="color: #FFFFFF;" >Identity Number (KTP)</label>
+                                <label for="ktp" class="form-label" style="color: #FFFFFF;">Identity Number
+                                    (KTP)</label>
                                 <input class="form-control @error('ktp') is-invalid @enderror" type="text" name="ktp"
-                                    id="ktp" value="{{ old('ktp') }}" placeholder="Enter Identity Number" style="border-color: #000000;background-color: #ffffffcf;">
+                                    id="ktp" value="{{ old('ktp') }}" placeholder="Enter Identity Number"
+                                    style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('ktp')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <!-- Rental Date -->
                             <div class="col-md-6 mb-3">
-                                <label for="rental_date" class="form-label" style="color: #FFFFFF;" >Rental Date</label>
+                                <label for="rental_date" class="form-label" style="color: #FFFFFF;">Rental Date</label>
                                 <input class="form-control @error('rental_date') is-invalid @enderror" type="date"
-                                    name="rental_date" id="rental_date" value="{{ old('rental_date') }}" style="border-color: #000000;background-color: #ffffffcf;">
+                                    name="rental_date" id="rental_date" value="{{ old('rental_date') }}"
+                                    style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('rental_date')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <!-- Return Date -->
                             <div class="col-md-6 mb-3">
-                                <label for="return_date" class="form-label" style="color: #FFFFFF;" >Return Date</label>
+                                <label for="return_date" class="form-label" style="color: #FFFFFF;">Return Date</label>
                                 <input class="form-control @error('return_date') is-invalid @enderror" type="date"
-                                    name="return_date" id="return_date" value="{{ old('return_date') }}" style="border-color: #000000;background-color: #ffffffcf;">
+                                    name="return_date" id="return_date" value="{{ old('return_date') }}"
+                                    style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('return_date')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
                             <!-- Car -->
                             <div class="col-md-12 mb-3">
-                                <label for="car" class="form-label" style="color: #FFFFFF;" >Car</label>
-                                <select name="car" id="car" class="form-select" style="border-color: #000000;background-color: #ffffffcf;">
+                                <label for="car" class="form-label" style="color: #FFFFFF;">Car</label>
+                                <select name="car" id="car" class="form-select"
+                                    style="border-color: #000000;background-color: #ffffffcf;">
                                     <option value="" disabled selected>Select Car</option>
-                                    @if($cars->isEmpty())
+                                    @if ($cars->isEmpty())
                                         <option disabled>Car not available</option>
                                     @else
                                         @foreach ($cars as $car)
@@ -99,19 +109,24 @@
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
-                            
+
                         </div>
                         <!-- Buttons -->
                         <div class="row">
                             <div class="col-md-6 d-grid">
-                                <a href="{{ route('customers.index') }}" class="btn btn-danger btn-lg mt-3" style="border-color: #0e0e0e; background-color: #b51200b6;">><i
-                                        class="bi-arrow-left-circle me-2"></i> Cancel</a>
+                                <a href="{{ route('customers.index') }}" class="btn btn-danger btn-lg mt-3"
+                                    style="border-color: #0e0e0e; background-color: #b51200b6;">
+                                    <i class="bi-arrow-left-circle me-2"></i>Cancel
+                                </a>
                             </div>
                             <div class="col-md-6 d-grid">
-                                <button type="submit" class="btn btn-success btn-lg mt-3" style="background-color: #0fe54fa5; border-color: #000000;">><i
-                                        class="bi-check-circle me-2"></i> Save</button>
+                                <button type="submit" class="btn btn-success btn-lg mt-3"
+                                    style="background-color: #0fe54fa5; border-color: #000000;">
+                                    <i class="bi-check-circle me-2"></i>Save
+                                </button>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -126,7 +141,8 @@
                     <img src="{{ asset('images/honda-civic-2024.png') }}" class="card-img-top" alt="Honda Civic 2024">
                     <div class="card-body">
                         <ul>
-                            <li style="color: #FFFFFF;">Engine: 1.5L DOHC 4-Cylinder Turbo, producing 178 PS (approximately 175 HP) at 6,000 rpm and 240 Nm torque at 1,700–4,500 rpm.</li>
+                            <li style="color: #FFFFFF;">Engine: 1.5L DOHC 4-Cylinder Turbo, producing 178 PS (approximately
+                                175 HP) at 6,000 rpm and 240 Nm torque at 1,700–4,500 rpm.</li>
                             <li style="color: #FFFFFF;">Transmission: CVT</li>
                             <li style="color: #FFFFFF;">Passenger Capacity: 5 persons</li>
                         </ul>
@@ -141,7 +157,8 @@
                     <img src="{{ asset('images/honda-hrv-2022.png') }}" class="card-img-top" alt="Honda HR-V 2022">
                     <div class="card-body">
                         <ul>
-                            <li style="color: #FFFFFF;">Engine: 1.5L VTEC Turbo, producing 177 PS (approximately 175 HP) at 6,000 rpm and a maximum torque of 240 Nm at 1,700–4,500 rpm.</li>
+                            <li style="color: #FFFFFF;">Engine: 1.5L VTEC Turbo, producing 177 PS (approximately 175 HP) at
+                                6,000 rpm and a maximum torque of 240 Nm at 1,700–4,500 rpm.</li>
                             <li style="color: #FFFFFF;">Transmission: CVT</li>
                             <li style="color: #FFFFFF;">Passenger Capacity: 5 persons</li>
                         </ul>
@@ -153,10 +170,12 @@
                     <div class="card-header text-center">
                         <h4 style="color: #FFFFFF;">Daihatsu Terios 2022</h4>
                     </div>
-                    <img src="{{ asset('images/daihatsu-terios-2022.png') }}" class="card-img-top" alt="Daihatsu Terios 2022">
+                    <img src="{{ asset('images/daihatsu-terios-2022.png') }}" class="card-img-top"
+                        alt="Daihatsu Terios 2022">
                     <div class="card-body">
                         <ul>
-                            <li style="color: #FFFFFF;">Engine: 1.5L 2NR-VE DOHC Dual VVT-i, producing  103 HP at 6,000 rpm and a maximum torque of 13.9 kg.m at 4,200 rpm.</li>
+                            <li style="color: #FFFFFF;">Engine: 1.5L 2NR-VE DOHC Dual VVT-i, producing 103 HP at 6,000 rpm
+                                and a maximum torque of 13.9 kg.m at 4,200 rpm.</li>
                             <li style="color: #FFFFFF;">Transmission: 5-speed manual or 4-speed automatic</li>
                             <li style="color: #FFFFFF;">Passenger Capacity: 7 persons</li>
                         </ul>
@@ -171,8 +190,9 @@
                     <img src="{{ asset('images/innovaa.png') }}" class="card-img-top" alt="Toyota Innova Zenix 2025">
                     <div class="card-body">
                         <ul>
-                            <li style="color: #FFFFFF;">Engine: 2.0L M20A-FKS Dynamic Force Engine, 4-cylinder, Dual VVT-i, producing 174 PS at 6,600 rpm and 20.9 kg·m of torque at 4,500–4,900 rpm.</li>
-                            <li style="color: #FFFFFF;">Transmission:  10-speed CVT with Direct Shift.</li>
+                            <li style="color: #FFFFFF;">Engine: 2.0L M20A-FKS Dynamic Force Engine, 4-cylinder, Dual VVT-i,
+                                producing 174 PS at 6,600 rpm and 20.9 kg·m of torque at 4,500–4,900 rpm.</li>
+                            <li style="color: #FFFFFF;">Transmission: 10-speed CVT with Direct Shift.</li>
                             <li style="color: #FFFFFF;">Passenger Capacity: 7 persons</li>
                         </ul>
                     </div>
@@ -189,7 +209,8 @@
                     <img src="{{ asset('images/honda-brio-2023.png') }}" class="card-img-top" alt="Honda Brio 2023">
                     <div class="card-body">
                         <ul>
-                            <li style="color: #FFFFFF;">1.2L SOHC 4-cylinder in-line, 16 valves i-VTEC + DBW, with a displacement of 1,198 cc.</li>
+                            <li style="color: #FFFFFF;">1.2L SOHC 4-cylinder in-line, 16 valves i-VTEC + DBW, with a
+                                displacement of 1,198 cc.</li>
                             <li style="color: #FFFFFF;">Transmission: Available in both 5-speed Manual and CVT.</li>
                             <li style="color: #FFFFFF;">Passenger Capacity: 5 persons</li>
                         </ul>
@@ -204,7 +225,8 @@
                     <img src="{{ asset('images/jimny.jpg') }}" class="card-img-top" alt="Suziki Jimny 2018">
                     <div class="card-body">
                         <ul>
-                            <li style="color: #FFFFFF;">Engine: 1.5L 4-cylinder in-line, DOHC, dengan displacement 1,462 cc.</li>
+                            <li style="color: #FFFFFF;">Engine: 1.5L 4-cylinder in-line, DOHC, dengan displacement 1,462
+                                cc.</li>
                             <li style="color: #FFFFFF;">Transmission: 5-speed Manual and 4-speed Automatic.</li>
                             <li style="color: #FFFFFF;">Passenger Capacity: 4 persons</li>
                         </ul>
@@ -235,7 +257,8 @@
                     <div class="card-body">
                         <ul>
                             <li style="color: #FFFFFF;">Engine: 1.0L Turbo atau 1.2L, 3-silinder.</li>
-                            <li style="color: #FFFFFF;">Transmission:  CVT (Continuously Variable Transmission) automatic.</li>
+                            <li style="color: #FFFFFF;">Transmission: CVT (Continuously Variable Transmission) automatic.
+                            </li>
                             <li style="color: #FFFFFF;">Passenger Capacity: 5 persons</li>
                         </ul>
                     </div>
