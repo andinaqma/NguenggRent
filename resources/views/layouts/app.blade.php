@@ -9,7 +9,22 @@ scale=1.0">
     <title>{{ $pageTitle }}</title>
     @vite('resources/sass/app.scss')
 </head>
-<body>
+<style>
+    /* Pastikan latar belakang memenuhi seluruh halaman */
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
+    body {
+        background-image: url('/images/bgapp.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Menjaga gambar tetap di tempat */
+    }
+</style>
+<body style="background-image: url('/images/bgapp.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     @include('layouts.nav')
     @yield('content')
     @vite('resources/js/app.js')
