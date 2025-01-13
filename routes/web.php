@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CustomerController; 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeCustomerController;
+use Barryvdh\DomPDF\ServiceProvider as PDF;
 
 Route::get('home', [HomeController::class, 'index'])->name('home'); 
 Route::get('profile', ProfileController::class)->name('profile');
@@ -36,3 +37,10 @@ Route::get('/homeCustomer', [HomeCustomerController::class, 'index'])->name('hom
 Route::post('/homeCustomer', [HomeCustomerController::class, 'store']);
 Route::get('/customers/create', [HomeCustomerController::class, 'create'])->name('customers.create');
 Route::post('/customers', [HomeCustomerController::class, 'store'])->name('customers.store');
+
+Route::get('customer/{id}/pdf', function ($id) {
+    $customer = App\Models\Customer::findOrFail($id);
+    
+    $pdf = app('dompdf.wrapper')->loadView('customer.pdf', compact('customer'));
+    return $pdf->download('customer_details.pdf');
+})->name('customer.pdf');

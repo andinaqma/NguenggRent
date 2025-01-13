@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Customer;
 use App\Models\Car;
+use PDF;
 
 class CustomerController extends Controller
 {
@@ -150,5 +151,12 @@ class CustomerController extends Controller
          // ELOQUENT 
          Customer::find($id)->delete(); 
          return redirect()->route('customers.index');  
+    }
+    public function downloadpdf()
+    {
+        $data = show::limit(20)->get();
+        $pdf = PDF::loadView('show-pdf', compact('data'));
+        $pdf->setPaper('A4', 'potrait');
+        return $pdf->stream('show.pdf');
     }
 }
