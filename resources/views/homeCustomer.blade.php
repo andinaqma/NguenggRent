@@ -133,18 +133,10 @@
                                             html: '<b>Thank you</b> for using <span style="color:#ff5733">Nguengg Rents</span> services! <br> We appreciate your trust. 😊',
                                             icon: 'success',
                                             iconColor: '#0fe54f', // Warna ikon
-                                            timer: 6000, // Durasi dalam milidetik (6 detik)
-                                            showConfirmButton: true, // Tombol konfirmasi
-                                            confirmButtonText: 'Awesome! 🚀',
+                                            timer: 10000, // Durasi dalam milidetik (6 detik)
+                                            showConfirmButton: false, // Tombol konfirmasi
                                             confirmButtonColor: '#0fe54f',
-                                            background: '#f7f9fc', // Latar belakang
-                                            backdrop: `
-                    rgba(0,0,0,0.4)
-                    url("https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif") 
-                    center left
-                    no-repeat
-                `,
-                                            timerProgressBar: true // Progres bar waktu
+                                            background: '#f7f9fc' // Latar belakang
                                         })
                                     });
                                 </script>
