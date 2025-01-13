@@ -143,7 +143,7 @@
                                             html: '<b>Thank you</b> for using <span style="color:#ff5733">Nguengg Rents</span> services! <br> We appreciate your trust. 😊',
                                             icon: 'success',
                                             iconColor: '#0fe54f', // Warna ikon
-                                            timer: 10000, // Durasi dalam milidetik (6 detik)
+                                            timer: 10000, 
                                             showConfirmButton: false, // Tombol konfirmasi
                                             confirmButtonColor: '#0fe54f',
                                             background: '#f7f9fc' // Latar belakang
