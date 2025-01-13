@@ -48,6 +48,16 @@ label">Email</label>
 label">Car</label>
                         <h5>{{ $customer->car->name }}</h5>
                     </div>
+                    <!-- Menampilkan File yang Diupload -->
+                    @if ($customer->file_path)
+                        <div class="col-md-12 mb-3">
+                            <label for="file" class="form-label">Uploaded File</label>
+                            <a href="{{ asset('storage/' . $customer->file_path) }}" target="_blank"
+                                class="btn btn-outline-primary">
+                                View Uploaded File
+                            </a>
+                        </div>
+                    @endif
                 </div>
                 <hr>
                 <div class="row">

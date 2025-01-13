@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-sm my-5">
-        <form action="{{ route('customers.store') }}" method="POST">
+        <form action="{{ route('customers.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row justify-content-center">
                 <!-- Form -->
@@ -65,6 +65,16 @@
                                     id="ktp" value="{{ old('ktp') }}" placeholder="Enter Identity Number"
                                     style="border-color: #000000;background-color: #ffffffcf;">
                                 @error('ktp')
+                                    <div class="text-danger"><small>{{ $message }}</small></div>
+                                @enderror
+                            </div>
+                            <!-- Upload File -->
+                            <div class="col-md-12 mb-3">
+                                <label for="file" class="form-label" style="color: #FFFFFF;">Upload File</label>
+                                <input class="form-control @error('file') is-invalid @enderror" type="file"
+                                    name="file" id="file"
+                                    style="border-color: #000000;background-color: #ffffffcf;">
+                                @error('file')
                                     <div class="text-danger"><small>{{ $message }}</small></div>
                                 @enderror
                             </div>
