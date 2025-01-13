@@ -120,10 +120,21 @@
                                 </a>
                             </div>
                             <div class="col-md-6 d-grid">
-                                <button type="submit" class="btn btn-success btn-lg mt-3"
+                                <button id="btn" type="submit" class="btn btn-success btn-lg mt-3"
                                     style="background-color: #0fe54fa5; border-color: #000000;">
                                     <i class="bi-check-circle me-2"></i>Save
                                 </button>
+                                <script src="dist/sweetalert2.all.min.js"></script>
+                                <script>
+                                    const btn = document.getElementById('btn');
+                                    btn.addEventListener('click', function() {
+                                        swal.fire({
+                                            title: 'Berhasil Disimpan',
+                                            text: 'Pensanan segera diproses',
+                                            icon: 'success'
+                                        })
+                                    });
+                                </script>
                             </div>
                         </div>
 
