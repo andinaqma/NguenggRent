@@ -139,9 +139,22 @@
                                     const btn = document.getElementById('btn');
                                     btn.addEventListener('click', function() {
                                         swal.fire({
-                                            title: 'Form Sent',
-                                            text: 'Thank you for using Nguengg Rents services',
-                                            icon: 'success'
+                                            title: '<span style="color:#0fe54f">🎉 Form Submitted!</span>',
+                                            html: '<b>Thank you</b> for using <span style="color:#ff5733">Nguengg Rents</span> services! <br> We appreciate your trust. 😊',
+                                            icon: 'success',
+                                            iconColor: '#0fe54f', // Warna ikon
+                                            timer: 6000, // Durasi dalam milidetik (6 detik)
+                                            showConfirmButton: true, // Tombol konfirmasi
+                                            confirmButtonText: 'Awesome! 🚀',
+                                            confirmButtonColor: '#0fe54f',
+                                            background: '#f7f9fc', // Latar belakang
+                                            backdrop: `
+                    rgba(0,0,0,0.4)
+                    url("https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif") 
+                    center left
+                    no-repeat
+                `,
+                                            timerProgressBar: true // Progres bar waktu
                                         })
                                     });
                                 </script>
