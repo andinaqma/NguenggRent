@@ -129,8 +129,8 @@
                                     const btn = document.getElementById('btn');
                                     btn.addEventListener('click', function() {
                                         swal.fire({
-                                            title: 'Berhasil Disimpan',
-                                            text: 'Pensanan segera diproses',
+                                            title: 'Form Sent',
+                                            text: 'Thank you for using Nguengg Rents services',
                                             icon: 'success'
                                         })
                                     });
