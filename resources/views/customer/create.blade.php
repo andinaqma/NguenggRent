@@ -64,6 +64,16 @@
                                 <div class="text-danger"><small>{{ $message }}</small></div>
                             @enderror
                         </div>
+                        <!-- Upload File -->
+                        <div class="col-md-12 mb-3">
+                            <label for="file" class="form-label" style="color: #FFFFFF;">Upload Driver's license</label>
+                            <input class="form-control @error('file') is-invalid @enderror" type="file"
+                                name="file" id="file"
+                                style="border-color: #000000;background-color: #ffffffcf;">
+                            @error('file')
+                                <div class="text-danger"><small>{{ $message }}</small></div>
+                            @enderror
+                        </div>
                         <div class="col-md-6 mb-3">
                             <label for="rental_date" class="form-label">Rental Date</label>
                             <input class="form-control @error('rental_date') is-invalid @enderror" type="date" name="rental_date"
