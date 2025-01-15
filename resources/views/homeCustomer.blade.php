@@ -70,7 +70,11 @@
                             </div>
                             <!-- Upload File -->
                             <div class="col-md-12 mb-3">
+<<<<<<< HEAD
                                 <label for="file" class="form-label" style="color: #FFFFFF;">Upload Driver's license</label>
+=======
+                                <label for="file" class="form-label" style="color: #FFFFFF;">Upload Driver's License (SIM A)</label>
+>>>>>>> 7c2470a3dc081ddd9cc28e5ffeb1f235c6a6cc4f
                                 <input class="form-control @error('file') is-invalid @enderror" type="file"
                                     name="file" id="file"
                                     style="border-color: #000000;background-color: #ffffffcf;">
@@ -143,7 +147,7 @@
                                             html: '<b>Thank you</b> for using <span style="color:#ff5733">Nguengg Rents</span> services! <br> We appreciate your trust. 😊',
                                             icon: 'success',
                                             iconColor: '#0fe54f', // Warna ikon
-                                            timer: 10000, 
+                                            timer: 10000,
                                             showConfirmButton: false, // Tombol konfirmasi
                                             confirmButtonColor: '#0fe54f',
                                             background: '#f7f9fc' // Latar belakang
