@@ -20,7 +20,6 @@
                                         <h4>Edit Customer</h4>
                                     </div>
                                     <hr>
-
                                     <!-- Input Fields -->
                                     <div class="row">
                                         <!-- First Name -->
@@ -68,7 +67,7 @@
                                                 <div class="text-danger"><small>{{ $message }}</small></div>
                                             @enderror
                                         </div>
-                                        div class="col-md-12 mb-3">
+                                        <div class="col-md-12 mb-3">
                                             <label for="ktp" class="form-label">Identity Number (KTP)</label>
                                             <input class="form-control @error('ktp') is-invalid @enderror" type="text"
                                                 name="ktp" id="ktp" value="{{ old('ktp', $customer->ktp) }}"
@@ -77,7 +76,16 @@
                                                 <div class="text-danger"><small>{{ $message }}</small></div>
                                             @enderror
                                         </div>
-
+                                        <!-- Upload Driver's License (SIM A) -->
+                                        <div class="col-md-12 mb-3">
+                                            <label for="file" class="form-label">Upload Driver's License (SIM A)</label>
+                                            <input class="form-control @error('file') is-invalid @enderror" type="file"
+                                                name="file" id="file"
+                                                style="border-color: #000000;background-color: #ffffffcf;">
+                                            @error('file')
+                                                <div class="text-danger"><small>{{ $message }}</small></div>
+                                            @enderror
+                                        </div>
                                         <!-- Rental Date -->
                                         <div class="col-md-6 mb-3">
                                             <label for="rental_date" class="form-label">Rental Date</label>
