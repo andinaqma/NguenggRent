@@ -8,6 +8,8 @@
 scale=1.0">
     <title>{{ $pageTitle }}</title>
     @vite('resources/sass/app.scss')
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 <style>
     /* Pastikan latar belakang memenuhi seluruh halaman */
