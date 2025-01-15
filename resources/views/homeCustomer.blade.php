@@ -70,11 +70,7 @@
                             </div>
                             <!-- Upload File -->
                             <div class="col-md-12 mb-3">
-<<<<<<< HEAD
-                                <label for="file" class="form-label" style="color: #FFFFFF;">Upload Driver's license</label>
-=======
                                 <label for="file" class="form-label" style="color: #FFFFFF;">Upload Driver's License (SIM A)</label>
->>>>>>> 7c2470a3dc081ddd9cc28e5ffeb1f235c6a6cc4f
                                 <input class="form-control @error('file') is-invalid @enderror" type="file"
                                     name="file" id="file"
                                     style="border-color: #000000;background-color: #ffffffcf;">
