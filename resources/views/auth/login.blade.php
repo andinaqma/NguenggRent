@@ -116,7 +116,7 @@
             </form> 
             <form action="{{ route('homeCustomer') }}" method="GET">
                 @csrf
-                <button type="submit">Form Rental</button>
+                <button type="submit">Rental Form</button>
             </form>
         </div>
     </div>

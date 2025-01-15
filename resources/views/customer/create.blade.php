@@ -61,10 +61,19 @@
                                 <div class="text-danger"><small>{{ $message }}</small></div>
                             @enderror
                         </div>
+<<<<<<< HEAD
                         <div class="col-md-12 mb-3">
                             <label for="file" class="form-label">Upload Driver License (SIM A)</label>
                             <input class="form-control @error('file') is-invalid @enderror" type="text" name="file"
                                 id="file" value="{{ old('file') }}" placeholder="Upload Driver License (SIM A)">
+=======
+                        <!-- Upload File -->
+                        <div class="col-md-12 mb-3">
+                            <label for="file" class="form-label" style="color: #FFFFFF;">Upload Driver's license</label>
+                            <input class="form-control @error('file') is-invalid @enderror" type="file"
+                                name="file" id="file"
+                                style="border-color: #000000;background-color: #ffffffcf;">
+>>>>>>> 18b3cba489cc527e2938d79de7262ba54a362c06
                             @error('file')
                                 <div class="text-danger"><small>{{ $message }}</small></div>
                             @enderror

@@ -11,7 +11,7 @@
                         style="border-color: #000000 !important; background-color: #000000c9 !important;">
                         <div class="mb-3 text-center">
                             <i class="bi-person-circle fs-1"></i>
-                            <h4 style="color: #FFFFFF;">Form Rent</h4>
+                            <h4 style="color: #FFFFFF;">Rental Form</h4>
                         </div>
                         <hr style="border: 1px solid #f9f8f8;">
                         <div class="row">
@@ -70,7 +70,11 @@
                             </div>
                             <!-- Upload File -->
                             <div class="col-md-12 mb-3">
+<<<<<<< HEAD
+                                <label for="file" class="form-label" style="color: #FFFFFF;">Upload Driver's license</label>
+=======
                                 <label for="file" class="form-label" style="color: #FFFFFF;">Upload Driver's License (SIM A)</label>
+>>>>>>> 7c2470a3dc081ddd9cc28e5ffeb1f235c6a6cc4f
                                 <input class="form-control @error('file') is-invalid @enderror" type="file"
                                     name="file" id="file"
                                     style="border-color: #000000;background-color: #ffffffcf;">
